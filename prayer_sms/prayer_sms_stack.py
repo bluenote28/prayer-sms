@@ -27,4 +27,4 @@ class PrayerSmsStack(Stack):
         code_signing_config=code_signing_config,
         runtime=Runtime.PYTHON_3_12,
         handler="prayer_handler.handler",
-        code=Code.from_asset(os.path.join(os.path.dirname('prayer_sms'), "prayer-handler")))
+        code=Code.from_asset(os.path.join(os.path.dirname('prayer-handler'), "prayer-handler")))
