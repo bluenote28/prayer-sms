@@ -23,8 +23,8 @@ class PrayerSmsStack(Stack):
         code_signing_config = CodeSigningConfig(self, "CodeSigningConfig",
         signing_profiles=[signing_profile])
 
-        Function(self, "Function",
+        Function(self, "PrayerHandler",
         code_signing_config=code_signing_config,
         runtime=Runtime.PYTHON_3_12,
         handler="prayer_handler.handler",
-        code=Code.from_asset(os.path.join(os.path.dirname('prayer-handler'), "prayer-handler")))
+        code=Code.from_asset(os.path.dirname(os.path.join('prayer_sms','prayer_handler.py'))))
